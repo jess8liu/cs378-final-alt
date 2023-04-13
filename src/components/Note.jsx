@@ -44,10 +44,10 @@ function Note(props) {
           <div className="title">
             {props.note_info.title}
           </div>
-          <button className="save_btn" onClick={props.edit_funct}> {/* TODO: rename class name*/}
+          <button className="save_btn" title="Edit" onClick={props.edit_funct}> {/* TODO: rename class name*/}
             Edit
           </button>
-          <button className="pin_btn" onClick={() => togglePin(props.note_info.is_pinned)}>
+          <button className="pin_btn" title="Pin" onClick={() => togglePin(props.note_info.is_pinned)}>
             Pin
           </button>
         </div>
@@ -57,12 +57,12 @@ function Note(props) {
           <p className="body_section textbox">{props.note_info.content}</p>
         </div>
 
-        <div className="body_section">
+        <div className="body_section" title="Settings">
           <button className="setting_btn" onClick={toggleSetting}>
             Settings
           </button>
 
-          <button className="trash_btn" onClick={() => handleDelete(props.note_info.cur_uid)}>
+          <button className="trash_btn" title="Trash" onClick={() => handleDelete(props.note_info.cur_uid)}>
             Trash
           </button>
         </div>
